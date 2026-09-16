@@ -1,0 +1,69 @@
+{
+  "name": "vp-devframe",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vp dev",
+    "build": "vp build",
+    "preview": "vp preview",
+    "prepare": "vp config",
+    "typecheck": "tsc --noEmit",
+    "start": "vp preview"
+  },
+  "dependencies": {
+    "@devframes/agentic": "^1.0.0",
+    "@devframes/hub": "^1.0.0",
+    "@devframes/hub-ui": "^1.0.0",
+    "@devframes/json-render": "^1.0.0",
+    "@devframes/json-render-ui": "^1.0.0",
+    "@devframes/plugin-a11y": "^1.0.0",
+    "@devframes/plugin-a11y--assets": "^1.0.0",
+    "@devframes/plugin-assets": "^1.0.0",
+    "@devframes/plugin-assets--assets": "^1.0.0",
+    "@devframes/plugin-code-server": "^1.0.0",
+    "@devframes/plugin-code-server--assets": "^1.0.0",
+    "@devframes/plugin-data-inspector": "^1.0.0",
+    "@devframes/plugin-data-inspector--assets": "^1.0.0",
+    "@devframes/plugin-git": "^1.0.0",
+    "@devframes/plugin-git--assets": "^1.0.0",
+    "@devframes/plugin-inspect": "^1.0.0",
+    "@devframes/plugin-inspect--assets": "^1.0.0",
+    "@devframes/plugin-messages": "^1.0.0",
+    "@devframes/plugin-messages--assets": "^1.0.0",
+    "@devframes/plugin-og": "^1.0.0",
+    "@devframes/plugin-og--assets": "^1.0.0",
+    "@devframes/plugin-terminals": "^1.0.0",
+    "@devframes/plugin-terminals--assets": "^1.0.0",
+    "@devframes/vite": "^1.0.0",
+    "@stylexjs/stylex": "^0.19.1",
+    "@tanstack/solid-form": "^1.33.5",
+    "@tanstack/solid-query": "^5.103.0",
+    "@tanstack/solid-start": "^1.168.52",
+    "@tanstack/solid-store": "^0.11.1",
+    "@tanstack/solid-table": "^9.2.4",
+    "@tanstack/solid-virtual": "^3.13.40",
+    "devframe": "^1.0.0",
+    "solid-js": "^1.9.15"
+  },
+  "devDependencies": {
+    "@stylexjs/babel-plugin": "^0.19.1",
+    "@stylexjs/unplugin": "^0.19.1",
+    "@types/node": "^26.5.1",
+    "playwright": "^1.63.0",
+    "typescript": "~6.0.2",
+    "vite": "npm:@voidzero-dev/vite-plus-core@0.3.1",
+    "vite-plugin-solid": "^2.11.14",
+    "vite-plus": "0.3.1"
+  },
+  "overrides": {
+    "vite": "npm:@voidzero-dev/vite-plus-core@0.3.1"
+  },
+  "devEngines": {
+    "packageManager": {
+      "name": "bun",
+      "version": "1.4.2",
+      "onFail": "download"
+    }
+  }
+}

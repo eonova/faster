@@ -1,0 +1,19 @@
+{
+  "baseUrl": "http://localhost:5175",
+  "routes": [
+    {
+      "path": "/",
+      "name": "home",
+      "expect": "首页显示标题、任务表单、任务表和 Devframe 插件虚拟列表，无控制台错误"
+    },
+    {
+      "path": "/__devframes/",
+      "name": "devframe-hub",
+      "expect": "Devframe Hub 能加载；由于默认开启 OTP 认证，出现认证界面也算 Hub 可用"
+    }
+  ],
+  "viewports": [
+    { "name": "desktop", "width": 1440, "height": 900 },
+    { "name": "mobile", "width": 390, "height": 844 }
+  ]
+}

@@ -1,9 +1,10 @@
 :root {
   color-scheme: dark;
-  background: #07080d;
+  background: #05080d;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
+  scroll-behavior: smooth;
 }
 
 * {
@@ -15,12 +16,128 @@ body {
   min-width: 320px;
   min-height: 100vh;
   background:
-    radial-gradient(circle at 15% 10%, rgba(91, 104, 220, 0.24), transparent 30%),
-    radial-gradient(circle at 85% 5%, rgba(38, 178, 168, 0.14), transparent 28%), #07080d;
+    radial-gradient(circle at 15% 38%, rgba(40, 118, 99, 0.07), transparent 27%),
+    radial-gradient(circle at 90% 70%, rgba(90, 54, 160, 0.08), transparent 30%), #05080d;
 }
 
 button,
 input,
 select {
   font: inherit;
+}
+::selection {
+  color: #03130c;
+  background: #7cffb2;
+}
+
+.aurora-scene {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  background: linear-gradient(180deg, #03040c 0%, #061025 54%, #03050a 100%);
+}
+.stars {
+  position: absolute;
+  inset: 0;
+  opacity: 0.65;
+  background-image:
+    radial-gradient(circle, rgba(235, 255, 248, 0.75) 0 1px, transparent 1.3px),
+    radial-gradient(circle, rgba(196, 221, 255, 0.6) 0 1px, transparent 1.4px);
+  background-position:
+    12px 18px,
+    72px 91px;
+  background-size:
+    113px 127px,
+    157px 181px;
+  mask-image: linear-gradient(to bottom, black, transparent 78%);
+}
+.aurora {
+  position: absolute;
+  top: -26%;
+  height: 140%;
+  border-radius: 48% 52% 56% 44% / 28% 34% 66% 72%;
+  filter: blur(28px);
+  mix-blend-mode: screen;
+  opacity: 0.75;
+  transform-origin: 50% 0;
+  animation: auroraSway 13s ease-in-out infinite alternate;
+}
+.aurora-one {
+  left: 3%;
+  width: 34%;
+  background: linear-gradient(
+    100deg,
+    transparent 5%,
+    rgba(49, 255, 157, 0.08) 24%,
+    rgba(94, 255, 186, 0.78) 47%,
+    rgba(47, 198, 207, 0.34) 63%,
+    transparent 86%
+  );
+  transform: rotate(7deg) skewX(-8deg);
+}
+.aurora-two {
+  left: 29%;
+  width: 42%;
+  background: linear-gradient(
+    100deg,
+    transparent 5%,
+    rgba(64, 227, 176, 0.04) 20%,
+    rgba(35, 205, 210, 0.55) 46%,
+    rgba(138, 88, 255, 0.55) 69%,
+    transparent 91%
+  );
+  animation-duration: 17s;
+  animation-delay: -6s;
+  transform: rotate(-4deg) skewX(7deg);
+}
+.aurora-three {
+  right: -5%;
+  width: 38%;
+  background: linear-gradient(
+    96deg,
+    transparent 7%,
+    rgba(91, 80, 238, 0.15) 25%,
+    rgba(157, 91, 255, 0.65) 52%,
+    rgba(43, 225, 184, 0.2) 73%,
+    transparent 94%
+  );
+  animation-duration: 15s;
+  animation-delay: -10s;
+  transform: rotate(9deg) skewX(-4deg);
+}
+.hero-vignette {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(
+      ellipse at 50% 44%,
+      transparent 15%,
+      rgba(3, 4, 12, 0.16) 58%,
+      rgba(3, 4, 12, 0.85) 100%
+    ),
+    linear-gradient(to top, rgba(3, 4, 12, 0.72), transparent 46%);
+}
+
+@keyframes auroraSway {
+  0% {
+    translate: -4% 0;
+    scale: 0.92 1;
+  }
+  50% {
+    translate: 5% 3%;
+    scale: 1.06 0.96;
+  }
+  100% {
+    translate: -1% -2%;
+    scale: 0.98 1.05;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    scroll-behavior: auto;
+  }
+  .aurora {
+    animation: none;
+  }
 }

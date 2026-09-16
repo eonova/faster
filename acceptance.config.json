@@ -4,7 +4,7 @@
     {
       "path": "/",
       "name": "home",
-      "expect": "首页显示标题、任务表单、任务表和 Devframe 插件虚拟列表，无控制台错误"
+      "expect": "首页呈现全屏极光首屏和醒目的 BUILD BETTER 标题，向下可见技术栈、任务工作区与 Devframe 插件目录，桌面和移动端布局完整且无控制台错误"
     },
     {
       "path": "/__devframes/",

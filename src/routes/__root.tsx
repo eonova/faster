@@ -11,11 +11,11 @@ export const Route = createRootRoute({
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Devframe × TanStack Start" },
+      { title: "Vite+ Starter — Build Better" },
       {
         name: "description",
         content:
-          "A SolidJS + StyleX starter wired to TanStack Start, Query, Form, Table, Virtual, Store, and Devframe Hub.",
+          "A polished Vite+ starter with TanStack Start, SolidJS, StyleX, and the complete Devframe toolkit.",
       },
     ],
     links: [{ rel: "icon", href: "/favicon.svg", type: "image/svg+xml" }],
